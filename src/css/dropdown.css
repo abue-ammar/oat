@@ -22,11 +22,13 @@
   [data-dropdown-item], .dropdown-item {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: var(--lt-space-2);
     width: 100%;
     padding: var(--lt-space-2) var(--lt-space-3);
     font-size: var(--lt-text-sm);
     text-align: left;
+    color: var(--lt-foreground);
     background: none;
     border: none;
     border-radius: var(--lt-radius-sm);

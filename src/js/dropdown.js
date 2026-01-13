@@ -167,7 +167,7 @@ class LTDropdown extends LTBase {
     this.#isOpen ? this.close() : this.open();
   }
 
-  get open() {
+  get isOpen() {
     return this.#isOpen;
   }
 }
