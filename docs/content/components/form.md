@@ -9,7 +9,6 @@ Form elements are styled automatically. Wrap inputs in `<label>` for proper asso
 {% demo() %}
 ```html
 <form>
-  
   <label>
     Name
     <input type="text" placeholder="Enter your name">
