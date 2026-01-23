@@ -8,4 +8,4 @@ highlight_code = true
 highlight_theme = "charcoal"
 
 [extra]
-description = "Oat - Ultra lightweight, semantic, zero-dependency HTML UI component library"
+description = "Oat - Ultra-lightweight, semantic, zero-dependency HTML UI component library"

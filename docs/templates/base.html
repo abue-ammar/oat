@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}{{ config.title }}{% endblock %}</title>
   <link rel="stylesheet" href="/oat.min.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <script src="/oat.min.js" defer></script>
   <script src="/main.js"></script>
   <style>
@@ -62,16 +63,21 @@
     }
 
     .demo-sidebar {
-      width: 18rem;
-
       .logo {
-        text-align: center;
         margin-bottom: var(--space-8);
+        padding-top: var(--space-3);
+        img {
+          height: 60px;
+          max-height: 60px;
+        }
       }
       nav sup {
         color: var(--muted-foreground);
         font-size: var(--text-8);
         margin-left: var(--space-1);
+      }
+      nav ul li {
+        margin: 0;
       }
     }
 
@@ -104,13 +110,14 @@
   <!-- Navigation Sidebar -->
   <aside class="sidebar demo-sidebar">
     <div class="logo">
-      <a href="/"><img src="/logo.svg" alt="{{ config.title }}" height="100"></a>
+      <a href="/"><img src="/favicon.svg" alt="{{ config.title }}"></a>
     </div>
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/usage/">Usage</a></li>
         <li><a href="/customizing/">Customizing</a></li>
+        <li><a href="/other-libs/">Other tiny libs</a></li>
         <li>
           <details open>
             <summary>
@@ -141,7 +148,7 @@
 
   <!-- Main Content -->
   <div class="sidebar-content">
-    <div class="container" style="padding: var(--space-12) var(--space-6);">
+    <div class="container" style="padding-top: var(--space-8);">
       {% block content %}{% endblock %}
     </div>
   </div>

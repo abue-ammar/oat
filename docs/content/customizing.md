@@ -3,7 +3,20 @@ title = "Customizing"
 description = "Customize and theme Oat by overriding CSS variables"
 +++
 
-Pretty much all properties of Oat are defined as CSS variables that can be overridden. See [theme.css](#) to see all variables. To override, redefine them in a CSS file in your project and include after the lib's CSS files.
+Pretty much all properties of Oat are defined as CSS variables that can be overridden. See [theme.css](#) to see all variables. To override, redefine them in a CSS file in your project and include it after the lib's CSS files.
+
+# Picking and choosing
+
+While it is quite okay to bundle all of Oat given how tiny it is (CSS %KB, JS %KB), it is possible to include components selectively.
+
+##### Must include
+- `01-reset.css`
+- `02-theme.css`
+- `03-base.css`
+- `base.js`
+- `your files after this`
+
+-------
 
 ## Theming
 
@@ -83,18 +96,38 @@ The following color variables from theme.css control the theme (colour profile).
 }
 ```
 
-## Dark mode
-
-Adding `data-theme="dark"` to `<body>` applies the dark theme. Customize the dark theme by redefining the aforementioned theme variables and scoping them inside `[data-theme="dark"] { }`
-
-# Picking and choosing
-
-While it is quite okay to bundle all of Oat given how tiny it is (CSS %KB, JS %KB), it is possible to include components selectively.
-
-#### Must include
-- `01-reset.css`
-- `02-theme.css`
-- `03-base.css`
-- `base.js`
 
 After these, include CSS and JS files the respective components.
+
+## Example themes
+
+### Default Oat brown
+```css
+--background: #fff;
+--foreground: #09090b;
+--card: #fff;
+--card-foreground: #09090b;
+--primary: #574747;
+--primary-foreground: #fafafa;
+--secondary: #f4f4f5;
+--secondary-foreground: #574747;
+--muted: #f4f4f5;
+--muted-foreground: #71717a;
+--faint: #fafafa;
+--accent: #f4f4f5;
+--danger: #df514c;
+--danger-foreground: #fafafa;
+--success: #4caf50;
+--success-foreground: #fafafa;
+--warning: #ff8c00;
+--warning-foreground: #09090b;
+--border: #d4d4d8;
+--input: #d4d4d8;
+--ring: #574747;
+```
+
+---------------
+
+# Dark mode
+
+Adding `data-theme="dark"` to `<body>` applies the dark theme. Customize the dark theme by redefining the aforementioned theme variables and scoping them inside `[data-theme="dark"] { ... }`
