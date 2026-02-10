@@ -1,6 +1,6 @@
 {
   "name": "@knadh/oat",
-  "version": "0.1.0",
+  "version": "version-0.0.0",
   "license": "MIT",
   "author": "Kailash Nadh",
   "homepage": "https://oat.ink",
@@ -12,16 +12,15 @@
   "keywords": ["ui", "components", "component-library"],
 
   "files": [
-    "dist/*.min.*",
-    "src/"
+    "oat.min.css",
+    "oat.min.js",
+    "css",
+    "js"
   ],
 
-  "main": "dist/oat.min.js",
-  "style": "dist/oat.min.css",
-  "scripts": {
-    "dist": "make dist"
-  },
+  "main": "oat.min.js",
+  "style": "oat.min.css",
 
-  "unpkg": "dist/oat.min.js",
-  "jsdelivr": "dist/oat.min.js"
+  "unpkg": "oat.min.js",
+  "jsdelivr": "oat.min.js"
 }

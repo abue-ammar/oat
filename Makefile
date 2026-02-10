@@ -1,7 +1,7 @@
 # oat - Build System
 # Requires: esbuild
 
-.PHONY: dist css js clean size
+.PHONY: dist css js clean size publish
 
 CSS_FILES = src/css/00-base.css \
             src/css/01-theme.css \
@@ -56,3 +56,10 @@ size:
 	@echo "JS (src):    $$(wc -c < dist/oat.js | tr -d ' ') bytes"
 	@echo "JS (min):    $$(wc -c < dist/oat.min.js | tr -d ' ') bytes"
 	@echo "JS (gzip):   $$(wc -c < dist/oat.min.js.gz | tr -d ' ') bytes"
+
+publish: clean dist
+	@cp -r src/css dist/css
+	@cp -r src/js dist/js
+	@VERSION=$$(git describe --tags --abbrev=0 | sed 's/^v//') && \
+		sed 's/"version-0.0.0"/"'"$$VERSION"'"/' package.json > dist/package.json
+	@cd dist && npm publish

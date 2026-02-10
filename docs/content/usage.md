@@ -9,8 +9,8 @@ title = "Usage"
 Include the CSS and JS files directly in your HTML:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/oat-ui/dist/oat.css">
-<script src="https://unpkg.com/oat-ui/dist/oat.js" defer></script>
+<link rel="stylesheet" href="https://unpkg.com/@knadh/oat/dist/oat.min.css">
+<script src="https://unpkg.com/@knadh/oat/dist/oat.min.js" defer></script>
 ```
 
 ### npm
