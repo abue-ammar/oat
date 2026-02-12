@@ -1,8 +1,8 @@
 @layer components {
-  menu[popover] {
+  [popover] {
     position: fixed;
     margin: 0;
-    padding: var(--space-1);
+    /* padding: var(--space-1); */
     min-width: 12rem;
     background-color: var(--background);
     border: 1px solid var(--border);
